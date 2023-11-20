@@ -57,6 +57,27 @@ namespace MVC.OneToManyRealtions.Migrations
 
                     b.ToTable("Sliders");
                 });
+
+            modelBuilder.Entity("MVC.SliderFrontToBack.Models.AboutCard", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Desc")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("AboutCards");
+                });
 #pragma warning restore 612, 618
         }
     }

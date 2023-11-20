@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddControllersWithViews();
-string _connectinString = "Server = ELVIN_SARKAROV\\SQLEXPRESS; Database = AllUpDataBase; Trusted_Connection = True";
+string _connectinString = "Server = DESKTOP-BQU8U4V; Database = AllUpDataBase; Trusted_Connection = True";
 
 builder.Services.AddDbContext<ProjectDbContext>(options =>
     options.UseSqlServer(_connectinString));
@@ -25,6 +25,10 @@ if (!app.Environment.IsDevelopment())
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.MapControllerRoute(
+    name: "areas",
+    pattern: "{area:exists}/{controller=DashBoard}/{action=Index}/{id?}");
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

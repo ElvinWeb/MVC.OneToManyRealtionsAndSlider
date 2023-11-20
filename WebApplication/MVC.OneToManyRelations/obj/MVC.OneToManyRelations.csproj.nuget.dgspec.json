@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\elvin\\OneDrive\\Documents\\Sənədlər\\ForFuture-tasks\\MVC.TableRelationsAndSlider\\WebApplication\\MVC.OneToManyRelations\\MVC.OneToManyRelations.csproj": {}
+    "C:\\Users\\II novbe\\Documents\\Tasks\\MVC.OneToManyRealtionsAndSlider\\WebApplication\\MVC.OneToManyRelations\\MVC.OneToManyRelations.csproj": {}
   },
   "projects": {
-    "C:\\Users\\elvin\\OneDrive\\Documents\\Sənədlər\\ForFuture-tasks\\MVC.TableRelationsAndSlider\\WebApplication\\MVC.OneToManyRelations\\MVC.OneToManyRelations.csproj": {
+    "C:\\Users\\II novbe\\Documents\\Tasks\\MVC.OneToManyRealtionsAndSlider\\WebApplication\\MVC.OneToManyRelations\\MVC.OneToManyRelations.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\elvin\\OneDrive\\Documents\\Sənədlər\\ForFuture-tasks\\MVC.TableRelationsAndSlider\\WebApplication\\MVC.OneToManyRelations\\MVC.OneToManyRelations.csproj",
+        "projectUniqueName": "C:\\Users\\II novbe\\Documents\\Tasks\\MVC.OneToManyRealtionsAndSlider\\WebApplication\\MVC.OneToManyRelations\\MVC.OneToManyRelations.csproj",
         "projectName": "MVC.OneToManyRelations",
-        "projectPath": "C:\\Users\\elvin\\OneDrive\\Documents\\Sənədlər\\ForFuture-tasks\\MVC.TableRelationsAndSlider\\WebApplication\\MVC.OneToManyRelations\\MVC.OneToManyRelations.csproj",
-        "packagesPath": "C:\\Users\\elvin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\elvin\\OneDrive\\Documents\\Sənədlər\\ForFuture-tasks\\MVC.TableRelationsAndSlider\\WebApplication\\MVC.OneToManyRelations\\obj\\",
+        "projectPath": "C:\\Users\\II novbe\\Documents\\Tasks\\MVC.OneToManyRealtionsAndSlider\\WebApplication\\MVC.OneToManyRelations\\MVC.OneToManyRelations.csproj",
+        "packagesPath": "C:\\Users\\II novbe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\II novbe\\Documents\\Tasks\\MVC.OneToManyRealtionsAndSlider\\WebApplication\\MVC.OneToManyRelations\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\elvin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\II novbe\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -74,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
