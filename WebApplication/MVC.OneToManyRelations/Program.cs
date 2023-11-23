@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-string _connectinString = "Server = ELVIN_SARKAROV\\SQLEXPRESS; Database = EternaDataBase; Trusted_Connection = True";
+string _connectinString = "Server = DESKTOP-KA8SSD4; Database = EternaDataBase; Trusted_Connection = True";
 
 builder.Services.AddDbContext<EternaDbContext>(options =>
     options.UseSqlServer(_connectinString));

@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\II novbe\\Documents\\Tasks\\MVC.OneToManyRealtionsAndSlider\\WebApplication\\MVC.OneToManyRealtions\\MVC.SliderFrontToBack.csproj": {}
+    "C:\\Users\\II novbe\\Desktop\\all task\\MVC.OneToManyRealtionsAndSlider\\WebApplication\\MVC.OneToManyRealtions\\MVC.SliderFrontToBack.csproj": {}
   },
   "projects": {
-    "C:\\Users\\II novbe\\Documents\\Tasks\\MVC.OneToManyRealtionsAndSlider\\WebApplication\\MVC.OneToManyRealtions\\MVC.SliderFrontToBack.csproj": {
+    "C:\\Users\\II novbe\\Desktop\\all task\\MVC.OneToManyRealtionsAndSlider\\WebApplication\\MVC.OneToManyRealtions\\MVC.SliderFrontToBack.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\II novbe\\Documents\\Tasks\\MVC.OneToManyRealtionsAndSlider\\WebApplication\\MVC.OneToManyRealtions\\MVC.SliderFrontToBack.csproj",
+        "projectUniqueName": "C:\\Users\\II novbe\\Desktop\\all task\\MVC.OneToManyRealtionsAndSlider\\WebApplication\\MVC.OneToManyRealtions\\MVC.SliderFrontToBack.csproj",
         "projectName": "MVC.SliderFrontToBack",
-        "projectPath": "C:\\Users\\II novbe\\Documents\\Tasks\\MVC.OneToManyRealtionsAndSlider\\WebApplication\\MVC.OneToManyRealtions\\MVC.SliderFrontToBack.csproj",
+        "projectPath": "C:\\Users\\II novbe\\Desktop\\all task\\MVC.OneToManyRealtionsAndSlider\\WebApplication\\MVC.OneToManyRealtions\\MVC.SliderFrontToBack.csproj",
         "packagesPath": "C:\\Users\\II novbe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\II novbe\\Documents\\Tasks\\MVC.OneToManyRealtionsAndSlider\\WebApplication\\MVC.OneToManyRealtions\\obj\\",
+        "outputPath": "C:\\Users\\II novbe\\Desktop\\all task\\MVC.OneToManyRealtionsAndSlider\\WebApplication\\MVC.OneToManyRealtions\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\II novbe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -74,7 +78,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

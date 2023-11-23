@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yNAHHRZ/1rOV3JFeL+dXIH2FNLfEIxRTpbv0KjIy3B4XQ34JN7S21zxyEyj83d6PmEDyIgS5TYsHzeJ7F2I+2Q==",
+  "dgSpecHash": "TBXvt+QhtFH+6ynIzytt2L6vg2lZ1wlgUpGDTj8G85vET2ghjioq+nGwE4kMwKHDLPR8564qG3S2IUsOQsbyCQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\II novbe\\Documents\\Tasks\\MVC.OneToManyRealtionsAndSlider\\WebApplication\\MVC.OneToManyRealtions\\MVC.SliderFrontToBack.csproj",
+  "projectFilePath": "C:\\Users\\II novbe\\Desktop\\all task\\MVC.OneToManyRealtionsAndSlider\\WebApplication\\MVC.OneToManyRealtions\\MVC.SliderFrontToBack.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\II novbe\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\II novbe\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

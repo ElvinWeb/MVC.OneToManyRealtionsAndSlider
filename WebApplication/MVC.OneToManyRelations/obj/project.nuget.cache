@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Kq3IZgTwV2fWSuV+gS2uPmiI46c37tmPe1keRQkuOvhu7qaGkvL9E1ji/kr6lcJUwxv9ZjqeZmZBDr/2pM/FiA==",
+  "dgSpecHash": "5hKbpTOXbvvC3GddS7YBoNzPECSvAT5yFaOZN2zT5KDizHIK9cHRDJWnVGRz+Ttjp6P0w5mwB0W33ogvi/zx2w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\II novbe\\Documents\\Tasks\\MVC.OneToManyRealtionsAndSlider\\WebApplication\\MVC.OneToManyRelations\\MVC.OneToManyRelations.csproj",
+  "projectFilePath": "C:\\Users\\II novbe\\Desktop\\all task\\MVC.OneToManyRealtionsAndSlider\\WebApplication\\MVC.OneToManyRelations\\MVC.OneToManyRelations.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\II novbe\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\II novbe\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

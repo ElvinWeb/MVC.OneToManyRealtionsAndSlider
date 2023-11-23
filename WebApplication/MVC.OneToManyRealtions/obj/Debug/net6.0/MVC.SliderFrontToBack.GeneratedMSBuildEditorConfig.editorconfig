@@ -9,49 +9,57 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MVC.SliderFrontToBack
 build_property.RootNamespace = MVC.SliderFrontToBack
-build_property.ProjectDir = C:\Users\II novbe\Documents\Tasks\MVC.OneToManyRealtionsAndSlider\WebApplication\MVC.OneToManyRealtions\
+build_property.ProjectDir = C:\Users\II novbe\Desktop\all task\MVC.OneToManyRealtionsAndSlider\WebApplication\MVC.OneToManyRealtions\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\II novbe\Documents\Tasks\MVC.OneToManyRealtionsAndSlider\WebApplication\MVC.OneToManyRealtions
+build_property.MSBuildProjectDirectory = C:\Users\II novbe\Desktop\all task\MVC.OneToManyRealtionsAndSlider\WebApplication\MVC.OneToManyRealtions
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/II novbe/Documents/Tasks/MVC.OneToManyRealtionsAndSlider/WebApplication/MVC.OneToManyRealtions/Areas/manage/Views/Create/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXENyZWF0ZVxDcmVhdGUuY3NodG1s
+[C:/Users/II novbe/Desktop/all task/MVC.OneToManyRealtionsAndSlider/WebApplication/MVC.OneToManyRealtions/Areas/Manage/Views/DashBoard/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXERhc2hCb2FyZFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/II novbe/Documents/Tasks/MVC.OneToManyRealtionsAndSlider/WebApplication/MVC.OneToManyRealtions/Areas/manage/Views/DashBoard/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXERhc2hCb2FyZFxJbmRleC5jc2h0bWw=
+[C:/Users/II novbe/Desktop/all task/MVC.OneToManyRealtionsAndSlider/WebApplication/MVC.OneToManyRealtions/Areas/Manage/Views/DashBoard/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXERhc2hCb2FyZFxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/II novbe/Documents/Tasks/MVC.OneToManyRealtionsAndSlider/WebApplication/MVC.OneToManyRealtions/Areas/manage/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXFNoYXJlZFxfTGF5b3V0LmNzaHRtbA==
+[C:/Users/II novbe/Desktop/all task/MVC.OneToManyRealtionsAndSlider/WebApplication/MVC.OneToManyRealtions/Areas/Manage/Views/DashBoard/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXERhc2hCb2FyZFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/II novbe/Documents/Tasks/MVC.OneToManyRealtionsAndSlider/WebApplication/MVC.OneToManyRealtions/Areas/manage/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcbWFuYWdlXFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
+[C:/Users/II novbe/Desktop/all task/MVC.OneToManyRealtionsAndSlider/WebApplication/MVC.OneToManyRealtions/Areas/Manage/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFNoYXJlZFxfTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/II novbe/Documents/Tasks/MVC.OneToManyRealtionsAndSlider/WebApplication/MVC.OneToManyRealtions/Views/About/About.cshtml]
+[C:/Users/II novbe/Desktop/all task/MVC.OneToManyRealtionsAndSlider/WebApplication/MVC.OneToManyRealtions/Areas/Manage/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/II novbe/Desktop/all task/MVC.OneToManyRealtionsAndSlider/WebApplication/MVC.OneToManyRealtions/Areas/Manage/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/II novbe/Desktop/all task/MVC.OneToManyRealtionsAndSlider/WebApplication/MVC.OneToManyRealtions/Views/About/About.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcQWJvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/II novbe/Documents/Tasks/MVC.OneToManyRealtionsAndSlider/WebApplication/MVC.OneToManyRealtions/Views/Home/Index.cshtml]
+[C:/Users/II novbe/Desktop/all task/MVC.OneToManyRealtionsAndSlider/WebApplication/MVC.OneToManyRealtions/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/II novbe/Documents/Tasks/MVC.OneToManyRealtionsAndSlider/WebApplication/MVC.OneToManyRealtions/Views/Home/ProductDetails.cshtml]
+[C:/Users/II novbe/Desktop/all task/MVC.OneToManyRealtionsAndSlider/WebApplication/MVC.OneToManyRealtions/Views/Home/ProductDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9kdWN0RGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/II novbe/Documents/Tasks/MVC.OneToManyRealtionsAndSlider/WebApplication/MVC.OneToManyRealtions/Views/Shared/_Layout.cshtml]
+[C:/Users/II novbe/Desktop/all task/MVC.OneToManyRealtionsAndSlider/WebApplication/MVC.OneToManyRealtions/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/II novbe/Documents/Tasks/MVC.OneToManyRealtionsAndSlider/WebApplication/MVC.OneToManyRealtions/Views/_ViewImports.cshtml]
+[C:/Users/II novbe/Desktop/all task/MVC.OneToManyRealtionsAndSlider/WebApplication/MVC.OneToManyRealtions/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/II novbe/Documents/Tasks/MVC.OneToManyRealtionsAndSlider/WebApplication/MVC.OneToManyRealtions/Views/_ViewStart.cshtml]
+[C:/Users/II novbe/Desktop/all task/MVC.OneToManyRealtionsAndSlider/WebApplication/MVC.OneToManyRealtions/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
