@@ -9,33 +9,33 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MVC.OneToManyRelations
 build_property.RootNamespace = MVC.OneToManyRelations
-build_property.ProjectDir = C:\Users\II novbe\Desktop\all task\MVC.OneToManyRealtionsAndSlider\WebApplication\MVC.OneToManyRelations\
+build_property.ProjectDir = C:\Users\elvin\OneDrive\Documents\Sənədlər\ForFuture-tasks\MVC.OneToManyRealtionsAndSlider\WebApplication\MVC.OneToManyRelations\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\II novbe\Desktop\all task\MVC.OneToManyRealtionsAndSlider\WebApplication\MVC.OneToManyRelations
+build_property.MSBuildProjectDirectory = C:\Users\elvin\OneDrive\Documents\Sənədlər\ForFuture-tasks\MVC.OneToManyRealtionsAndSlider\WebApplication\MVC.OneToManyRelations
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/II novbe/Desktop/all task/MVC.OneToManyRealtionsAndSlider/WebApplication/MVC.OneToManyRelations/Views/Home/Index.cshtml]
+[C:/Users/elvin/OneDrive/Documents/Sənədlər/ForFuture-tasks/MVC.OneToManyRealtionsAndSlider/WebApplication/MVC.OneToManyRelations/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/II novbe/Desktop/all task/MVC.OneToManyRealtionsAndSlider/WebApplication/MVC.OneToManyRelations/Views/Portfolio/PortfolioDetails.cshtml]
+[C:/Users/elvin/OneDrive/Documents/Sənədlər/ForFuture-tasks/MVC.OneToManyRealtionsAndSlider/WebApplication/MVC.OneToManyRelations/Views/Portfolio/PortfolioDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9ydGZvbGlvXFBvcnRmb2xpb0RldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/II novbe/Desktop/all task/MVC.OneToManyRealtionsAndSlider/WebApplication/MVC.OneToManyRelations/Views/Portfolio/PortfolioIndex.cshtml]
+[C:/Users/elvin/OneDrive/Documents/Sənədlər/ForFuture-tasks/MVC.OneToManyRealtionsAndSlider/WebApplication/MVC.OneToManyRelations/Views/Portfolio/PortfolioIndex.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9ydGZvbGlvXFBvcnRmb2xpb0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/II novbe/Desktop/all task/MVC.OneToManyRealtionsAndSlider/WebApplication/MVC.OneToManyRelations/Views/Shared/_Layout.cshtml]
+[C:/Users/elvin/OneDrive/Documents/Sənədlər/ForFuture-tasks/MVC.OneToManyRealtionsAndSlider/WebApplication/MVC.OneToManyRelations/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/II novbe/Desktop/all task/MVC.OneToManyRealtionsAndSlider/WebApplication/MVC.OneToManyRelations/Views/_ViewImports.cshtml]
+[C:/Users/elvin/OneDrive/Documents/Sənədlər/ForFuture-tasks/MVC.OneToManyRealtionsAndSlider/WebApplication/MVC.OneToManyRelations/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/II novbe/Desktop/all task/MVC.OneToManyRealtionsAndSlider/WebApplication/MVC.OneToManyRelations/Views/_ViewStart.cshtml]
+[C:/Users/elvin/OneDrive/Documents/Sənədlər/ForFuture-tasks/MVC.OneToManyRealtionsAndSlider/WebApplication/MVC.OneToManyRelations/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

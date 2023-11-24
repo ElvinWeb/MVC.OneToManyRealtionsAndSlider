@@ -4,6 +4,7 @@ using MVC.OneToManyRealtions.Models;
 using MVC.SliderFrontToBack.Helpers;
 using MVC.SliderFrontToBack.Models;
 using MVC.SliderFrontToBack.ViewModel;
+using System.Drawing;
 
 namespace MVC.SliderFrontToBack.Areas.Manage.Controllers
 {
@@ -12,7 +13,7 @@ namespace MVC.SliderFrontToBack.Areas.Manage.Controllers
     {
         private readonly ProjectDbContext _DbContext;
         private readonly IWebHostEnvironment _env;
-        private HomeViewModel HomeViewModel = new HomeViewModel();
+        private HomeViewModel _HomeVM = new HomeViewModel();
 
         public DashBoardController(ProjectDbContext context, IWebHostEnvironment env)
         {
@@ -36,6 +37,8 @@ namespace MVC.SliderFrontToBack.Areas.Manage.Controllers
         public IActionResult Create(Slider slide)
         {
             string fileName = string.Empty;
+            if (!ModelState.IsValid) return View(slide);
+
             if (slide.Image != null)
             {
                 fileName = slide.Image.FileName;
@@ -54,28 +57,21 @@ namespace MVC.SliderFrontToBack.Areas.Manage.Controllers
                     fileName = fileName.Substring(fileName.Length - 64, 64);
                 }
             }
-            if (!ModelState.IsValid) return View(slide);
-
-            string folder = "bg-slider-images/";
-            string rootPath = _env.WebRootPath;
-
-            Helper.PathCombine(rootPath, folder, slide.Image);
-
-            //fileName = Guid.NewGuid().ToString() + fileName;
+            else
+            {
+                ModelState.AddModelError("Image", "Must be choosed!!");
+                return View();
+            }
 
 
-            //string path = $"C:\\Users\\II novbe\\Desktop\\all task\\MVC.OneToManyRealtionsAndSlider\\WebApplication\\MVC.OneToManyRealtions\\wwwroot\\assets\\bg-slider-images\\{fileName}";
+            string folder = "assets/bg-slider-images";
 
-            //using (FileStream fileStream = new FileStream(path, FileMode.Create))
-            //{
-            //    slide.Image.CopyTo(fileStream);
-            //}
+            string newFileName = Helper.GetFileName(_env.WebRootPath, folder, slide.Image);
 
-            slide.ImgUrl = fileName;
+            slide.ImgUrl = newFileName;
 
             _DbContext.Sliders.Add(slide);
             _DbContext.SaveChanges();
-
 
             return RedirectToAction("Index");
 
@@ -92,7 +88,58 @@ namespace MVC.SliderFrontToBack.Areas.Manage.Controllers
         [HttpPost]
         public IActionResult Update(Slider slide)
         {
-            return View();
+
+            Slider wantedSlide = _DbContext.Sliders.FirstOrDefault(s => s.Id == slide.Id);
+
+            if (wantedSlide == null) return NotFound();
+
+            if (!ModelState.IsValid) return View();
+
+            string fileName = string.Empty;
+
+            if (slide.Image != null)
+            {
+                fileName = slide.Image.FileName;
+
+                if (slide.Image.ContentType != "image/png" && slide.Image.ContentType != "image/jpeg")
+                {
+                    ModelState.AddModelError("Image", "please select correct file type");
+                    return View(slide);
+                }
+
+                if (slide.Image.Length > 1048576)
+                {
+                    ModelState.AddModelError("Image", "file size should be more lower than 1mb ");
+                    return View(slide);
+                }
+
+                if (fileName.Length > 64)
+                {
+                    fileName = fileName.Substring(fileName.Length - 64, 64);
+                }
+                string folderPath = "assets/bg-slider-images";
+                string expiredFileName = Helper.GetFileName(_env.WebRootPath, folderPath, slide.Image);
+
+                string wantedPath = Path.Combine(_env.WebRootPath, folderPath, wantedSlide.ImgUrl);
+
+                if (System.IO.File.Exists(wantedPath))
+                {
+                    System.IO.File.Delete(wantedPath);
+                }
+
+                wantedSlide.ImgUrl = expiredFileName;
+            }
+
+            wantedSlide.Title = slide.Title;
+            wantedSlide.Description = slide.Description;
+            wantedSlide.SubTitle = slide.SubTitle;
+            wantedSlide.Name = slide.Name;
+            wantedSlide.RedirectUrl = slide.RedirectUrl;
+
+
+
+            _DbContext.SaveChanges();
+            return RedirectToAction("Index");
         }
 
         [HttpGet]
@@ -106,9 +153,9 @@ namespace MVC.SliderFrontToBack.Areas.Manage.Controllers
         public IActionResult Delete(Slider slide)
         {
             Slider wantedSlide = _DbContext.Sliders.FirstOrDefault(s => s.Id == slide.Id);
+            string folderPath = "assets/bg-slider-images";
+            string path = Path.Combine(_env.WebRootPath, folderPath, wantedSlide.ImgUrl);
 
-            string fileName = wantedSlide.ImgUrl;
-            string path = $"C:\\Users\\II novbe\\Desktop\\all task\\MVC.OneToManyRealtionsAndSlider\\WebApplication\\MVC.OneToManyRealtions\\wwwroot\\assets\\bg-slider-images\\{fileName}";
 
             if (wantedSlide.Image != null)
             {

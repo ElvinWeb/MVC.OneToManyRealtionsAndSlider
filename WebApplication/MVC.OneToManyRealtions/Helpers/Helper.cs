@@ -1,12 +1,19 @@
 ﻿namespace MVC.SliderFrontToBack.Helpers
 {
-    public class Helper
+    public static class Helper
     {
-        public static string GetPathCombine(string rootPath, string folderName , IFormFile imageFile)
+        public static string GetFileName(string rootPath, string folderName, IFormFile imageFile)
         {
-            string fileName = imageFile.FileName.Substring(imageFile.FileName.Length - 64, 64) ? Guid.NewGuid().ToString() + fileName : fileName;
+            string fileName = imageFile.FileName.Length > 64 ? imageFile.FileName.Substring(imageFile.FileName.Length - 64, 64) : imageFile.FileName;
+            fileName = Guid.NewGuid().ToString() + imageFile.FileName;
+            string path = Path.Combine(rootPath, folderName, fileName);
 
-            return "";
+            using (FileStream Stream = new FileStream(path, FileMode.Create))
+            {
+                imageFile.CopyTo(Stream);
+            }
+
+            return fileName;
         }
     }
 }

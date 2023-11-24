@@ -2013,24 +2013,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\II novbe\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\elvin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\II novbe\\Desktop\\all task\\MVC.OneToManyRealtionsAndSlider\\WebApplication\\MVC.OneToManyRelations\\MVC.OneToManyRelations.csproj",
+      "projectUniqueName": "C:\\Users\\elvin\\OneDrive\\Documents\\Sənədlər\\ForFuture-tasks\\MVC.OneToManyRealtionsAndSlider\\WebApplication\\MVC.OneToManyRelations\\MVC.OneToManyRelations.csproj",
       "projectName": "MVC.OneToManyRelations",
-      "projectPath": "C:\\Users\\II novbe\\Desktop\\all task\\MVC.OneToManyRealtionsAndSlider\\WebApplication\\MVC.OneToManyRelations\\MVC.OneToManyRelations.csproj",
-      "packagesPath": "C:\\Users\\II novbe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\II novbe\\Desktop\\all task\\MVC.OneToManyRealtionsAndSlider\\WebApplication\\MVC.OneToManyRelations\\obj\\",
+      "projectPath": "C:\\Users\\elvin\\OneDrive\\Documents\\Sənədlər\\ForFuture-tasks\\MVC.OneToManyRealtionsAndSlider\\WebApplication\\MVC.OneToManyRelations\\MVC.OneToManyRelations.csproj",
+      "packagesPath": "C:\\Users\\elvin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\elvin\\OneDrive\\Documents\\Sənədlər\\ForFuture-tasks\\MVC.OneToManyRealtionsAndSlider\\WebApplication\\MVC.OneToManyRelations\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\II novbe\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\elvin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

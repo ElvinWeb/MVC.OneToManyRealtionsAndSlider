@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddControllersWithViews();
-string _connectinString = "Server=DESKTOP-KA8SSD4;Database=AllUpDataBase;Trusted_Connection=True;";
+string _connectinString = "Server=ELVIN_SARKAROV\\SQLEXPRESS;Database=AllUpDataBase;Trusted_Connection=True;";
 
 builder.Services.AddDbContext<ProjectDbContext>(options =>
     options.UseSqlServer(_connectinString));

@@ -13,6 +13,7 @@
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Title</th>
+                <th scope="col">Name</th>
                 <th scope="col">Description</th>
                 <th scope="col">Sub-Title</th>
                 <th scope="col">Img</th>
@@ -27,9 +28,10 @@
                 <tr>
                     <th scope="row">@counter</th>
                     <td>@slide.Title</td>
+                    <td>@slide.Name</td>
                     <td>@slide.Description</td>
                     <td>@slide.SubTitle</td>
-                    <td style="max-width:150px;"><img style="width:40%" src="~/assets/images/@slide.ImgUrl" /></td>
+                    <td style="max-width:150px;"><img style="width:40%" src="~/assets/bg-slider-images/@slide.ImgUrl" /></td>
                     <td style="max-width:280px;">@slide.RedirectUrl</td>
                     <td>
                         <a class="btn btn-warning" asp-action="Update" asp-controller="DashBoard" asp-route-id="@slide.Id">Update</a>
