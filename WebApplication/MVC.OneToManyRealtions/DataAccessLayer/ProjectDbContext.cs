@@ -10,5 +10,9 @@ namespace MVC.OneToManyRealtions.DataAccessLayer
 
         public DbSet<Slider> Sliders { get; set; }
         public DbSet<AboutCard> AboutCards { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Manufacturer> Manufacturers { get; set; }
+        public DbSet<Tag> Tags { get; set; }
+        public DbSet<ProductTag> ProductTags { get; set; }
     }
 }

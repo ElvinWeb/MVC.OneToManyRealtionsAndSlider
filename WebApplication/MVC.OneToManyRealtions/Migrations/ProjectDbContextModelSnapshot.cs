@@ -83,6 +83,153 @@ namespace MVC.OneToManyRealtions.Migrations
 
                     b.ToTable("AboutCards");
                 });
+
+            modelBuilder.Entity("MVC.SliderFrontToBack.Models.Manufacturer", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Manufacturers");
+                });
+
+            modelBuilder.Entity("MVC.SliderFrontToBack.Models.Product", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("CostPrice")
+                        .HasColumnType("float");
+
+                    b.Property<string>("Desc")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("DiscountPercent")
+                        .HasColumnType("float");
+
+                    b.Property<bool>("IsAvailable")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("ManufacturerId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("SalePrice")
+                        .HasColumnType("float");
+
+                    b.Property<double>("Tax")
+                        .HasColumnType("float");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ManufacturerId");
+
+                    b.ToTable("Products");
+                });
+
+            modelBuilder.Entity("MVC.SliderFrontToBack.Models.ProductTag", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TagId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.HasIndex("TagId");
+
+                    b.ToTable("ProductTags");
+                });
+
+            modelBuilder.Entity("MVC.SliderFrontToBack.Models.Tag", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Tags");
+                });
+
+            modelBuilder.Entity("MVC.SliderFrontToBack.Models.Product", b =>
+                {
+                    b.HasOne("MVC.SliderFrontToBack.Models.Manufacturer", "Manufacturer")
+                        .WithMany("Products")
+                        .HasForeignKey("ManufacturerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Manufacturer");
+                });
+
+            modelBuilder.Entity("MVC.SliderFrontToBack.Models.ProductTag", b =>
+                {
+                    b.HasOne("MVC.SliderFrontToBack.Models.Product", "Product")
+                        .WithMany("ProductTags")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MVC.SliderFrontToBack.Models.Tag", "Tag")
+                        .WithMany("ProductTags")
+                        .HasForeignKey("TagId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+
+                    b.Navigation("Tag");
+                });
+
+            modelBuilder.Entity("MVC.SliderFrontToBack.Models.Manufacturer", b =>
+                {
+                    b.Navigation("Products");
+                });
+
+            modelBuilder.Entity("MVC.SliderFrontToBack.Models.Product", b =>
+                {
+                    b.Navigation("ProductTags");
+                });
+
+            modelBuilder.Entity("MVC.SliderFrontToBack.Models.Tag", b =>
+                {
+                    b.Navigation("ProductTags");
+                });
 #pragma warning restore 612, 618
         }
     }

@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Dashboard</title>
+    <title>SB Admin AllUp - Dashboard</title>
 
     <!-- Custom fonts for this template-->
     <link href="~/Manage/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -131,10 +131,22 @@
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link collapsed" href="tables.html" href="#" data-toggle="collapse" data-target="#collapseTables"
+                   aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Tables</span>
                 </a>
+
+                <div id="collapseTables" class="collapse" aria-labelledby="headingPages"
+                     data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Utilities:</h6>
+                        <a class="collapse-item" asp-action="Index" asp-controller="DashBoard">Sliders</a>
+                        <a class="collapse-item" asp-action="Index" asp-controller="Manufacturer">Manufacturers</a>
+                        <a class="collapse-item" asp-action="Index" asp-controller="Product">Products</a>
+                        <a class="collapse-item" asp-action="Index" asp-controller="Tag">Tags</a>
+                    </div>
+                </div>
             </li>
 
             <!-- Divider -->
