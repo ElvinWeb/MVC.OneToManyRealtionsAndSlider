@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using MVC.OneToManyRealtions.DataAccessLayer;
 using MVC.SliderFrontToBack.Models;
 
@@ -118,19 +119,22 @@ namespace MVC.SliderFrontToBack.Areas.Manage.Controllers
             return RedirectToAction("Index");
         }
 
-        //Optional
+
         [HttpGet]
         public IActionResult Update(int id)
         {
             ViewBag.Manufacturers = _DbContext.Manufacturers.ToList();
+            ViewBag.Tags = _DbContext.Tags.ToList();
 
             if (id == null) return NotFound();
 
-            Product product = _DbContext.Products.FirstOrDefault(b => b.Id == id);
+            Product exitProduct = _DbContext.Products.Include(pt => pt.ProductTags).FirstOrDefault(b => b.Id == id);
 
-            if (product == null) return NotFound();
+            if (exitProduct == null) return NotFound();
 
-            return View(product);
+            exitProduct.TagIds = exitProduct.ProductTags.Select(t => t.TagId).ToList();
+
+            return View(exitProduct);
         }
 
         [HttpPost]
@@ -138,10 +142,11 @@ namespace MVC.SliderFrontToBack.Areas.Manage.Controllers
         {
 
             ViewBag.Manufacturers = _DbContext.Manufacturers.ToList();
+            ViewBag.Tags = _DbContext.Tags.ToList();
 
             if (!ModelState.IsValid) return View();
 
-            Product existProduct = _DbContext.Products.FirstOrDefault(b => b.Id == product.Id);
+            Product existProduct = _DbContext.Products.Include(pt => pt.ProductTags).FirstOrDefault(b => b.Id == product.Id);
 
             if (existProduct == null) return NotFound();
 
@@ -151,6 +156,17 @@ namespace MVC.SliderFrontToBack.Areas.Manage.Controllers
                 return View();
             }
 
+            existProduct.ProductTags.RemoveAll(pt => !product.TagIds.Any(pId => pId == pt.TagId));
+
+            foreach (var id in product.TagIds.Where(pt => !existProduct.ProductTags.Any(pId => pt == pId.TagId)))
+            {
+                ProductTag productTag = new ProductTag()
+                {
+                    TagId = id,
+                };
+
+                existProduct.ProductTags.Add(productTag);
+            }
 
 
 

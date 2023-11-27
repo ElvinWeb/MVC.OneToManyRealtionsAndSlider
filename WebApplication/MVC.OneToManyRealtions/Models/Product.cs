@@ -15,7 +15,7 @@ namespace MVC.SliderFrontToBack.Models
         public double DiscountPercent { get; set; }
         public Manufacturer? Manufacturer { get; set; }
         public int ManufacturerId { get; set; }
-        public List<ProductTag> ProductTags { get; set; } = new List<ProductTag>();
+        public List<ProductTag>? ProductTags { get; set; }
         [NotMapped]
         public List<int> TagIds { get; set; }
 
