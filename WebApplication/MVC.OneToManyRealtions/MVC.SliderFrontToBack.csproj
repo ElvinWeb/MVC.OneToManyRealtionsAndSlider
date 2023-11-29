@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\assets\bg-slider-images\" />
+    <Folder Include="wwwroot\assets\books\" />
   </ItemGroup>
 
 </Project>

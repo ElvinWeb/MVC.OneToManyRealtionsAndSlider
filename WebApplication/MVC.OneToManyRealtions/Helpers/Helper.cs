@@ -1,6 +1,6 @@
 ﻿namespace MVC.SliderFrontToBack.Helpers
 {
-    public static class Helper
+    public  class Helper
     {
         public static string GetFileName(string rootPath, string folderName, IFormFile imageFile)
         {

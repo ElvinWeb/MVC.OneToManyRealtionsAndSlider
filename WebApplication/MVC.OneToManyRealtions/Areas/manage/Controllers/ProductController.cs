@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MVC.OneToManyRealtions.DataAccessLayer;
+using MVC.SliderFrontToBack.Helpers;
 using MVC.SliderFrontToBack.Models;
 
 namespace MVC.SliderFrontToBack.Areas.Manage.Controllers
@@ -9,10 +10,12 @@ namespace MVC.SliderFrontToBack.Areas.Manage.Controllers
     public class ProductController : Controller
     {
         private readonly ProjectDbContext _DbContext;
+        private readonly IWebHostEnvironment _env;
 
-        public ProductController(ProjectDbContext context)
+        public ProductController(ProjectDbContext context, IWebHostEnvironment env)
         {
             _DbContext = context;
+            _env = env;
 
         }
         public IActionResult Index()
@@ -78,6 +81,85 @@ namespace MVC.SliderFrontToBack.Areas.Manage.Controllers
                 }
             }
 
+
+            if (product.ProductMainImage != null)
+            {
+
+                if (product.ProductMainImage.ContentType != "image/png" && product.ProductMainImage.ContentType != "image/jpeg")
+                {
+                    ModelState.AddModelError("ProductMainImage", "please select correct file type");
+                    return View();
+                }
+
+                if (product.ProductMainImage.Length > 1048576)
+                {
+                    ModelState.AddModelError("ProductMainImage", "file size should be more lower than 1mb ");
+                    return View();
+                }
+
+                string newFileName = Helper.GetFileName(_env.WebRootPath, "assets/books", product.ProductMainImage);
+                ProductImage productImage = new ProductImage
+                {
+                    Product = product,
+                    ImgUrl = newFileName,
+                    isPoster = true,
+                };
+                _DbContext.ProductImages.Add(productImage);
+            };
+
+            if (product.ProductHoverImage != null)
+            {
+
+                if (product.ProductHoverImage.ContentType != "image/png" && product.ProductHoverImage.ContentType != "image/jpeg")
+                {
+                    ModelState.AddModelError("ProductHoverImage", "please select correct file type");
+                    return View();
+                }
+
+                if (product.ProductHoverImage.Length > 1048576)
+                {
+                    ModelState.AddModelError("ProductHoverImage", "file size should be more lower than 1mb ");
+                    return View();
+                }
+
+                string newFileName = Helper.GetFileName(_env.WebRootPath, "assets/books", product.ProductHoverImage);
+                ProductImage productImage = new ProductImage
+                {
+                    Product = product,
+                    ImgUrl = newFileName,
+                    isPoster = false,
+                };
+                _DbContext.ProductImages.Add(productImage);
+            };
+
+            if (product.ImageFiles != null)
+            {
+                foreach (var img in product.ImageFiles)
+                {
+
+                    if (img.ContentType != "image/png" && img.ContentType != "image/jpeg")
+                    {
+                        ModelState.AddModelError("ImageFiles", "please select correct file type");
+                        return View();
+                    }
+
+                    if (img.Length > 1048576)
+                    {
+                        ModelState.AddModelError("ImageFiles", "file size should be more lower than 1mb ");
+                        return View();
+                    }
+
+                    string newFileName = Helper.GetFileName(_env.WebRootPath, "assets/books", img);
+                    ProductImage productImage = new ProductImage
+                    {
+                        Product = product,
+                        ImgUrl = newFileName,
+                        isPoster = null,
+                    };
+                    _DbContext.ProductImages.Add(productImage);
+                }
+            }
+
             _DbContext.Products.Add(product);
             _DbContext.SaveChanges();
 
@@ -92,7 +174,7 @@ namespace MVC.SliderFrontToBack.Areas.Manage.Controllers
 
             if (id == null) return NotFound();
 
-            Product product = _DbContext.Products.FirstOrDefault(p => p.Id == id);
+            Product product = _DbContext.Products.Include(x => x.ProductImages).FirstOrDefault(p => p.Id == id);
 
             if (product == null) return NotFound();
 
@@ -106,12 +188,10 @@ namespace MVC.SliderFrontToBack.Areas.Manage.Controllers
             ViewBag.Manufacturers = _DbContext.Manufacturers.ToList();
             ViewBag.Tags = _DbContext.Tags.ToList();
 
-            Product wantedProduct = _DbContext.Products.FirstOrDefault(p => p.Id == product.Id);
+            Product wantedProduct = _DbContext.Products.Include(x => x.ProductImages).FirstOrDefault(p => p.Id == product.Id);
 
-            if (wantedProduct == null)
-            {
-                return NotFound();
-            }
+            if (wantedProduct == null) return NotFound();
+
 
             _DbContext.Products.Remove(wantedProduct);
             _DbContext.SaveChanges();
@@ -128,13 +208,13 @@ namespace MVC.SliderFrontToBack.Areas.Manage.Controllers
 
             if (id == null) return NotFound();
 
-            Product exitProduct = _DbContext.Products.Include(pt => pt.ProductTags).FirstOrDefault(b => b.Id == id);
+            Product product = _DbContext.Products.Include(pt => pt.ProductTags).Include(x => x.ProductImages).FirstOrDefault(b => b.Id == id);
 
-            if (exitProduct == null) return NotFound();
+            if (product == null) return NotFound();
 
-            exitProduct.TagIds = exitProduct.ProductTags.Select(t => t.TagId).ToList();
+            product.TagIds = product.ProductTags.Select(t => t.TagId).ToList();
 
-            return View(exitProduct);
+            return View(product);
         }
 
         [HttpPost]
@@ -144,9 +224,9 @@ namespace MVC.SliderFrontToBack.Areas.Manage.Controllers
             ViewBag.Manufacturers = _DbContext.Manufacturers.ToList();
             ViewBag.Tags = _DbContext.Tags.ToList();
 
-            if (!ModelState.IsValid) return View();
+            //if (!ModelState.IsValid) return View();
 
-            Product existProduct = _DbContext.Products.Include(pt => pt.ProductTags).FirstOrDefault(b => b.Id == product.Id);
+            Product existProduct = _DbContext.Products.Include(pt => pt.ProductTags).Include(x => x.ProductImages).FirstOrDefault(b => b.Id == product.Id);
 
             if (existProduct == null) return NotFound();
 
@@ -169,6 +249,86 @@ namespace MVC.SliderFrontToBack.Areas.Manage.Controllers
             }
 
 
+            existProduct.ProductImages.RemoveAll(pi => !product.ProductImageIds.Contains(pi.Id) && pi.isPoster == true);
+            if (product.ProductMainImage != null)
+            {
+
+                if (product.ProductMainImage.ContentType != "image/png" && product.ProductMainImage.ContentType != "image/jpeg")
+                {
+                    ModelState.AddModelError("ProductMainImage", "please select correct file type");
+                    return View();
+                }
+
+                if (product.ProductMainImage.Length > 1048576)
+                {
+                    ModelState.AddModelError("ProductMainImage", "file size should be more lower than 1mb ");
+                    return View();
+                }
+
+                string newFileName = Helper.GetFileName(_env.WebRootPath, "assets/books", product.ProductMainImage);
+                ProductImage productImage = new ProductImage
+                {
+                    Product = product,
+                    ImgUrl = newFileName,
+                    isPoster = true,
+                };
+                existProduct.ProductImages.Add(productImage);
+            };
+
+            existProduct.ProductImages.RemoveAll(pi => !product.ProductImageIds.Contains(pi.Id) && pi.isPoster == false);
+            if (product.ProductHoverImage != null)
+            {
+
+                if (product.ProductHoverImage.ContentType != "image/png" && product.ProductHoverImage.ContentType != "image/jpeg")
+                {
+                    ModelState.AddModelError("ProductHoverImage", "please select correct file type");
+                    return View();
+                }
+
+                if (product.ProductHoverImage.Length > 1048576)
+                {
+                    ModelState.AddModelError("ProductHoverImage", "file size should be more lower than 1mb ");
+                    return View();
+                }
+
+                string newFileName = Helper.GetFileName(_env.WebRootPath, "assets/books", product.ProductHoverImage);
+                ProductImage productImage = new ProductImage
+                {
+                    Product = product,
+                    ImgUrl = newFileName,
+                    isPoster = false,
+                };
+                existProduct.ProductImages.Add(productImage);
+            };
+
+            existProduct.ProductImages.RemoveAll(pi => !product.ProductImageIds.Contains(pi.Id) && pi.isPoster == null);
+            if (product.ImageFiles != null)
+            {
+                foreach (var img in product.ImageFiles)
+                {
+
+                    if (img.ContentType != "image/png" && img.ContentType != "image/jpeg")
+                    {
+                        ModelState.AddModelError("ImageFiles", "please select correct file type");
+                        return View();
+                    }
+
+                    if (img.Length > 1048576)
+                    {
+                        ModelState.AddModelError("ImageFiles", "file size should be more lower than 1mb ");
+                        return View();
+                    }
+
+                    string newFileName = Helper.GetFileName(_env.WebRootPath, "assets/books", img);
+                    ProductImage productImage = new ProductImage
+                    {
+                        Product = product,
+                        ImgUrl = newFileName,
+                        isPoster = null,
+                    };
+                    existProduct.ProductImages.Add(productImage);
+                }
+            }
 
             existProduct.Name = product.Name;
             existProduct.Desc = product.Desc;
@@ -186,3 +346,5 @@ namespace MVC.SliderFrontToBack.Areas.Manage.Controllers
     }
 
 }
+
+

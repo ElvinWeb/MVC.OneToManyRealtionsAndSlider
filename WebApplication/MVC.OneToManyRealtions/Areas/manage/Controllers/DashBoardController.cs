@@ -146,6 +146,8 @@ namespace MVC.SliderFrontToBack.Areas.Manage.Controllers
         public IActionResult Delete(int id)
         {
             Slider slide = _DbContext.Sliders.FirstOrDefault(s => s.Id == id);
+
+           
             return View(slide);
         }
 
@@ -153,6 +155,7 @@ namespace MVC.SliderFrontToBack.Areas.Manage.Controllers
         public IActionResult Delete(Slider slide)
         {
             Slider wantedSlide = _DbContext.Sliders.FirstOrDefault(s => s.Id == slide.Id);
+
             string folderPath = "assets/bg-slider-images";
             string path = Path.Combine(_env.WebRootPath, folderPath, wantedSlide.ImgUrl);
 

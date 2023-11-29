@@ -18,6 +18,17 @@ namespace MVC.SliderFrontToBack.Models
         public List<ProductTag>? ProductTags { get; set; }
         [NotMapped]
         public List<int> TagIds { get; set; }
+        [NotMapped]
+        public List<int>? ProductImageIds { get; set; }
+        [NotMapped]
+        public IFormFile? ProductMainImage { get; set; }
+        [NotMapped]
+        public IFormFile? ProductHoverImage { get; set; }
+        [NotMapped]
+        public List<IFormFile>? ImageFiles { get; set; }
+
+        public List<ProductImage>? ProductImages { get; set; }
+
 
     }
 }
