@@ -284,9 +284,9 @@ namespace MVC.SliderFrontToBack.Areas.Manage.Controllers
             }
 
 
-            existProduct.ProductImages.RemoveAll(pi => !product.ProductImageIds.Contains(pi.Id) && pi.isPoster == true);
             if (product.ProductMainImage != null)
             {
+                existProduct.ProductImages.RemoveAll(pi => !product.ProductImageIds.Contains(pi.Id) && pi.isPoster == true);
 
                 if (product.ProductMainImage.ContentType != "image/png" && product.ProductMainImage.ContentType != "image/jpeg")
                 {
@@ -310,9 +310,9 @@ namespace MVC.SliderFrontToBack.Areas.Manage.Controllers
                 existProduct.ProductImages.Add(productImage);
             };
 
-            existProduct.ProductImages.RemoveAll(pi => !product.ProductImageIds.Contains(pi.Id) && pi.isPoster == false);
             if (product.ProductHoverImage != null)
             {
+                existProduct.ProductImages.RemoveAll(pi => !product.ProductImageIds.Contains(pi.Id) && pi.isPoster == false);
 
                 if (product.ProductHoverImage.ContentType != "image/png" && product.ProductHoverImage.ContentType != "image/jpeg")
                 {
