@@ -192,6 +192,41 @@ namespace MVC.SliderFrontToBack.Areas.Manage.Controllers
 
             if (wantedProduct == null) return NotFound();
 
+            if (wantedProduct.ProductImages != null)
+            {
+                foreach (var image in wantedProduct.ProductImages)
+                {
+                    string folderPath = "assets/books";
+
+                    if (image.isPoster == null)
+                    {
+                        string path = Path.Combine(_env.WebRootPath, folderPath, image.ImgUrl);
+
+                        if (System.IO.File.Exists(path))
+                        {
+                            System.IO.File.Delete(path);
+                        }
+                    }
+                    if (image.isPoster == false)
+                    {
+                        string path = Path.Combine(_env.WebRootPath, folderPath, image.ImgUrl);
+
+                        if (System.IO.File.Exists(path))
+                        {
+                            System.IO.File.Delete(path);
+                        }
+                    }
+                    if (image.isPoster == true)
+                    {
+                        string path = Path.Combine(_env.WebRootPath, folderPath, image.ImgUrl);
+
+                        if (System.IO.File.Exists(path))
+                        {
+                            System.IO.File.Delete(path);
+                        }
+                    }
+                }
+            }
 
             _DbContext.Products.Remove(wantedProduct);
             _DbContext.SaveChanges();

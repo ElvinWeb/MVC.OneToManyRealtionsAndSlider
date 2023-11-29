@@ -1,11 +1,11 @@
 ﻿<Project>
   <ItemGroup>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\bg-slider-images\656c6327-ff8b-432e-a117-0f671a1e90fcproduct-details-4.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\bg-slider-images\01b23383-2318-4b27-8666-ccb7c2f7c881product-9.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>MVC.SliderFrontToBack</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/MVC.SliderFrontToBack</BasePath>
-      <RelativePath>assets/bg-slider-images/656c6327-ff8b-432e-a117-0f671a1e90fcproduct-details-4.jpg</RelativePath>
+      <RelativePath>assets/bg-slider-images/01b23383-2318-4b27-8666-ccb7c2f7c881product-9.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -14,14 +14,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\bg-slider-images\656c6327-ff8b-432e-a117-0f671a1e90fcproduct-details-4.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\bg-slider-images\01b23383-2318-4b27-8666-ccb7c2f7c881product-9.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\bg-slider-images\e294f258-8184-470b-a8ce-33134ad79855slider-1.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\bg-slider-images\83ca3396-459f-4b05-93da-cd6336544960product-12.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>MVC.SliderFrontToBack</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/MVC.SliderFrontToBack</BasePath>
-      <RelativePath>assets/bg-slider-images/e294f258-8184-470b-a8ce-33134ad79855slider-1.jpg</RelativePath>
+      <RelativePath>assets/bg-slider-images/83ca3396-459f-4b05-93da-cd6336544960product-12.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -30,7 +30,7 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\bg-slider-images\e294f258-8184-470b-a8ce-33134ad79855slider-1.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\bg-slider-images\83ca3396-459f-4b05-93da-cd6336544960product-12.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\css\plugins\animate.css))">
       <SourceType>Package</SourceType>

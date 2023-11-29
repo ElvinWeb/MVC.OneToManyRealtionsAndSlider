@@ -147,7 +147,7 @@ namespace MVC.SliderFrontToBack.Areas.Manage.Controllers
         {
             Slider slide = _DbContext.Sliders.FirstOrDefault(s => s.Id == id);
 
-           
+
             return View(slide);
         }
 
@@ -157,11 +157,12 @@ namespace MVC.SliderFrontToBack.Areas.Manage.Controllers
             Slider wantedSlide = _DbContext.Sliders.FirstOrDefault(s => s.Id == slide.Id);
 
             string folderPath = "assets/bg-slider-images";
-            string path = Path.Combine(_env.WebRootPath, folderPath, wantedSlide.ImgUrl);
 
 
-            if (wantedSlide.Image != null)
+            if (wantedSlide.ImgUrl != null)
             {
+                string path = Path.Combine(_env.WebRootPath, folderPath, wantedSlide.ImgUrl);
+
                 if (System.IO.File.Exists(path))
                 {
                     System.IO.File.Delete(path);
